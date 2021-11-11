@@ -193,19 +193,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DIMOK\\.nuget\\packages\\": {}
+    "C:\\Users\\Professional\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DIMOK\\Desktop\\Csharp-Project\\IntelligentWorkKeeper\\IntelligentWorkKeeper\\IntelligentWorkKeeper.csproj",
+      "projectUniqueName": "C:\\Users\\Professional\\Documents\\GitHub\\Csharp-Project\\IntelligentWorkKeeper\\IntelligentWorkKeeper\\IntelligentWorkKeeper.csproj",
       "projectName": "IntelligentWorkKeeper",
-      "projectPath": "C:\\Users\\DIMOK\\Desktop\\Csharp-Project\\IntelligentWorkKeeper\\IntelligentWorkKeeper\\IntelligentWorkKeeper.csproj",
-      "packagesPath": "C:\\Users\\DIMOK\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DIMOK\\Desktop\\Csharp-Project\\IntelligentWorkKeeper\\IntelligentWorkKeeper\\obj\\",
+      "projectPath": "C:\\Users\\Professional\\Documents\\GitHub\\Csharp-Project\\IntelligentWorkKeeper\\IntelligentWorkKeeper\\IntelligentWorkKeeper.csproj",
+      "packagesPath": "C:\\Users\\Professional\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Professional\\Documents\\GitHub\\Csharp-Project\\IntelligentWorkKeeper\\IntelligentWorkKeeper\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DIMOK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Professional\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
