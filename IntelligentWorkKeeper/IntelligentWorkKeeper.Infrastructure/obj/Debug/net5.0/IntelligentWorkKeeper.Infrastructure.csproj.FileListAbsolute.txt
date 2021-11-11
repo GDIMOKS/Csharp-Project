@@ -1,0 +1,17 @@
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\bin\Debug\net5.0\IntelligentWorkKeeper.Infrastructure.deps.json
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\bin\Debug\net5.0\IntelligentWorkKeeper.Infrastructure.runtimeconfig.json
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\bin\Debug\net5.0\IntelligentWorkKeeper.Infrastructure.runtimeconfig.dev.json
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\bin\Debug\net5.0\IntelligentWorkKeeper.Infrastructure.dll
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\bin\Debug\net5.0\ref\IntelligentWorkKeeper.Infrastructure.dll
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\bin\Debug\net5.0\IntelligentWorkKeeper.Infrastructure.pdb
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\bin\Debug\net5.0\IntelligentWorkKeeper.Domain.dll
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\bin\Debug\net5.0\IntelligentWorkKeeper.Domain.pdb
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\obj\Debug\net5.0\IntelligentWorkKeeper.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\obj\Debug\net5.0\IntelligentWorkKeeper.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\obj\Debug\net5.0\IntelligentWorkKeeper.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\obj\Debug\net5.0\IntelligentWorkKeeper.Infrastructure.AssemblyInfo.cs
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\obj\Debug\net5.0\IntelligentWorkKeeper.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\obj\Debug\net5.0\IntelligentWorkKeeper.Infrastructure.dll
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\obj\Debug\net5.0\ref\IntelligentWorkKeeper.Infrastructure.dll
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\obj\Debug\net5.0\IntelligentWorkKeeper.Infrastructure.pdb
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\obj\Debug\net5.0\IntelligentWorkKeeper.Infrastructure.genruntimeconfig.cache

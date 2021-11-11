@@ -12,6 +12,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+using Microsoft.EntityFrameworkCore;
+
 namespace IntelligentWorkKeeper
 {
     public class Startup
@@ -28,6 +30,10 @@ namespace IntelligentWorkKeeper
         {
 
             services.AddControllers();
+
+            services.AddDbContext<IntelligentWorkKeeper.Infrastructure.Context>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("IntelligentWorkKeeper")));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "IntelligentWorkKeeper", Version = "v1" });

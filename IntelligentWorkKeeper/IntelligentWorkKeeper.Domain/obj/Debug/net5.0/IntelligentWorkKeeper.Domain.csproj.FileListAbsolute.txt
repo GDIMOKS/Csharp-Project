@@ -1,0 +1,12 @@
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Domain\bin\Debug\net5.0\IntelligentWorkKeeper.Domain.deps.json
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Domain\bin\Debug\net5.0\IntelligentWorkKeeper.Domain.dll
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Domain\bin\Debug\net5.0\ref\IntelligentWorkKeeper.Domain.dll
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Domain\bin\Debug\net5.0\IntelligentWorkKeeper.Domain.pdb
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Domain\obj\Debug\net5.0\IntelligentWorkKeeper.Domain.csproj.AssemblyReference.cache
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Domain\obj\Debug\net5.0\IntelligentWorkKeeper.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Domain\obj\Debug\net5.0\IntelligentWorkKeeper.Domain.AssemblyInfoInputs.cache
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Domain\obj\Debug\net5.0\IntelligentWorkKeeper.Domain.AssemblyInfo.cs
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Domain\obj\Debug\net5.0\IntelligentWorkKeeper.Domain.csproj.CoreCompileInputs.cache
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Domain\obj\Debug\net5.0\IntelligentWorkKeeper.Domain.dll
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Domain\obj\Debug\net5.0\ref\IntelligentWorkKeeper.Domain.dll
+C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Domain\obj\Debug\net5.0\IntelligentWorkKeeper.Domain.pdb
