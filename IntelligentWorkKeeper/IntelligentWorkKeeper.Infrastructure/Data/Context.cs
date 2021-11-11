@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Microsoft.EntityFrameworkCore;
-using IntelligentWorkKeeper.Domain;
+using IntelligentWorkKeeper.Domain.Models;
 
 namespace IntelligentWorkKeeper.Infrastructure
 {

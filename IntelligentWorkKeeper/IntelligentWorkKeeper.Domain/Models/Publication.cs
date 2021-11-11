@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace IntelligentWorkKeeper.Domain.Models
 {
-    public class Publication
+    public class Publication : IntelligentWork
     {
-        public Guid Id { get; set; }
         public string Publisher { get; set; }
         public string UDK { get; set; }
         public int PageCount { get; set; }

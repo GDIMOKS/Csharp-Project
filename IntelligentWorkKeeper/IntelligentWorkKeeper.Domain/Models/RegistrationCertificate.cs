@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace IntelligentWorkKeeper.Domain.Models
 {
-    public class RegistrationCertificate
+    public class RegistrationCertificate : IntelligentWork
     {
-        public Guid Id { get; set; }
         public string ProductType { get; set; }
         public string ProductName { get; set; }
         public string Number { get; set; }
