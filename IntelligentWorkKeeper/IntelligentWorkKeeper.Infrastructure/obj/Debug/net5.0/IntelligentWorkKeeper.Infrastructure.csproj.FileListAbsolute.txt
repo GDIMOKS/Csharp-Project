@@ -15,4 +15,3 @@ C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeepe
 C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\obj\Debug\net5.0\ref\IntelligentWorkKeeper.Infrastructure.dll
 C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\obj\Debug\net5.0\IntelligentWorkKeeper.Infrastructure.pdb
 C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\obj\Debug\net5.0\IntelligentWorkKeeper.Infrastructure.genruntimeconfig.cache
-C:\Users\DIMOK\Desktop\Csharp-Project\IntelligentWorkKeeper\IntelligentWorkKeeper.Infrastructure\obj\Debug\net5.0\IntelligentWorkKeeper.Infrastructure.csproj.CopyComplete

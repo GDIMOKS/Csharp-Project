@@ -19,36 +19,22 @@ namespace IntelligentWorkKeeper.Infrastructure.Migrations
                 .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("IntelligentWorkKeeper.Domain.Article", b =>
+            modelBuilder.Entity("AuthorIntelligentWork", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<Guid>("AuthorsId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("ArticleType")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("IntelligentWorksId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("CollectionTitle")
-                        .HasColumnType("nvarchar(max)");
+                    b.HasKey("AuthorsId", "IntelligentWorksId");
 
-                    b.Property<int>("EndPage")
-                        .HasColumnType("int");
+                    b.HasIndex("IntelligentWorksId");
 
-                    b.Property<int>("MagazineNumber")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Part")
-                        .HasColumnType("int");
-
-                    b.Property<int>("StartPage")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Articles");
+                    b.ToTable("AuthorIntelligentWork");
                 });
 
-            modelBuilder.Entity("IntelligentWorkKeeper.Domain.Author", b =>
+            modelBuilder.Entity("IntelligentWorkKeeper.Domain.Models.Author", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -56,12 +42,6 @@ namespace IntelligentWorkKeeper.Infrastructure.Migrations
 
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("IntelligentWorkId")
-                        .HasColumnType("int");
-
-                    b.Property<Guid?>("IntelligentWorkId1")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
@@ -83,32 +63,10 @@ namespace IntelligentWorkKeeper.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IntelligentWorkId1");
-
                     b.ToTable("Authors");
                 });
 
-            modelBuilder.Entity("IntelligentWorkKeeper.Domain.Book", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("BookType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Edition")
-                        .HasColumnType("int");
-
-                    b.Property<string>("EditionType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Books");
-                });
-
-            modelBuilder.Entity("IntelligentWorkKeeper.Domain.Indexation", b =>
+            modelBuilder.Entity("IntelligentWorkKeeper.Domain.Models.Indexation", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -133,7 +91,7 @@ namespace IntelligentWorkKeeper.Infrastructure.Migrations
                     b.ToTable("Indexations");
                 });
 
-            modelBuilder.Entity("IntelligentWorkKeeper.Domain.IntelligentWork", b =>
+            modelBuilder.Entity("IntelligentWorkKeeper.Domain.Models.IntelligentWork", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -149,6 +107,10 @@ namespace IntelligentWorkKeeper.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("GRNTI")
@@ -172,9 +134,11 @@ namespace IntelligentWorkKeeper.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("IntelligentWorks");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("IntelligentWork");
                 });
 
-            modelBuilder.Entity("IntelligentWorkKeeper.Domain.KeyWord", b =>
+            modelBuilder.Entity("IntelligentWorkKeeper.Domain.Models.KeyWord", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -196,11 +160,9 @@ namespace IntelligentWorkKeeper.Infrastructure.Migrations
                     b.ToTable("KeyWords");
                 });
 
-            modelBuilder.Entity("IntelligentWorkKeeper.Domain.Publication", b =>
+            modelBuilder.Entity("IntelligentWorkKeeper.Domain.Models.Publication", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.HasBaseType("IntelligentWorkKeeper.Domain.Models.IntelligentWork");
 
                     b.Property<int>("PageCount")
                         .HasColumnType("int");
@@ -211,16 +173,12 @@ namespace IntelligentWorkKeeper.Infrastructure.Migrations
                     b.Property<string>("UDK")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
-
-                    b.ToTable("Publications");
+                    b.HasDiscriminator().HasValue("Publication");
                 });
 
-            modelBuilder.Entity("IntelligentWorkKeeper.Domain.RegistrationCertificate", b =>
+            modelBuilder.Entity("IntelligentWorkKeeper.Domain.Models.RegistrationCertificate", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.HasBaseType("IntelligentWorkKeeper.Domain.Models.IntelligentWork");
 
                     b.Property<string>("Number")
                         .HasColumnType("nvarchar(max)");
@@ -240,42 +198,85 @@ namespace IntelligentWorkKeeper.Infrastructure.Migrations
                     b.Property<string>("RightHolder")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
-
-                    b.ToTable("RegistrationCertificates");
+                    b.HasDiscriminator().HasValue("RegistrationCertificate");
                 });
 
-            modelBuilder.Entity("IntelligentWorkKeeper.Domain.Author", b =>
+            modelBuilder.Entity("IntelligentWorkKeeper.Domain.Models.Article", b =>
                 {
-                    b.HasOne("IntelligentWorkKeeper.Domain.IntelligentWork", "IntelligentWork")
-                        .WithMany("Authors")
-                        .HasForeignKey("IntelligentWorkId1");
+                    b.HasBaseType("IntelligentWorkKeeper.Domain.Models.Publication");
 
-                    b.Navigation("IntelligentWork");
+                    b.Property<string>("ArticleType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CollectionTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("EndPage")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MagazineNumber")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Part")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StartPage")
+                        .HasColumnType("int");
+
+                    b.HasDiscriminator().HasValue("Article");
                 });
 
-            modelBuilder.Entity("IntelligentWorkKeeper.Domain.Indexation", b =>
+            modelBuilder.Entity("IntelligentWorkKeeper.Domain.Models.Book", b =>
                 {
-                    b.HasOne("IntelligentWorkKeeper.Domain.IntelligentWork", "IntelligentWork")
+                    b.HasBaseType("IntelligentWorkKeeper.Domain.Models.Publication");
+
+                    b.Property<string>("BookType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Edition")
+                        .HasColumnType("int");
+
+                    b.Property<string>("EditionType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasDiscriminator().HasValue("Book");
+                });
+
+            modelBuilder.Entity("AuthorIntelligentWork", b =>
+                {
+                    b.HasOne("IntelligentWorkKeeper.Domain.Models.Author", null)
+                        .WithMany()
+                        .HasForeignKey("AuthorsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("IntelligentWorkKeeper.Domain.Models.IntelligentWork", null)
+                        .WithMany()
+                        .HasForeignKey("IntelligentWorksId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("IntelligentWorkKeeper.Domain.Models.Indexation", b =>
+                {
+                    b.HasOne("IntelligentWorkKeeper.Domain.Models.IntelligentWork", "IntelligentWork")
                         .WithMany("Indexations")
                         .HasForeignKey("IntelligentWorkId1");
 
                     b.Navigation("IntelligentWork");
                 });
 
-            modelBuilder.Entity("IntelligentWorkKeeper.Domain.KeyWord", b =>
+            modelBuilder.Entity("IntelligentWorkKeeper.Domain.Models.KeyWord", b =>
                 {
-                    b.HasOne("IntelligentWorkKeeper.Domain.IntelligentWork", "IntelligentWork")
+                    b.HasOne("IntelligentWorkKeeper.Domain.Models.IntelligentWork", "IntelligentWork")
                         .WithMany("KeyWords")
                         .HasForeignKey("IntelligentWorkId1");
 
                     b.Navigation("IntelligentWork");
                 });
 
-            modelBuilder.Entity("IntelligentWorkKeeper.Domain.IntelligentWork", b =>
+            modelBuilder.Entity("IntelligentWorkKeeper.Domain.Models.IntelligentWork", b =>
                 {
-                    b.Navigation("Authors");
-
                     b.Navigation("Indexations");
 
                     b.Navigation("KeyWords");

@@ -18,8 +18,9 @@ namespace IntelligentWorkKeeper.Domain.Models
         public int NumberInList { get; set; }
 
         // свойства навигации
-        //public List<IntelligentWork> IntelligentWorks { get; set; }
-        public int IntelligentWorkId { get; set; }
-        public IntelligentWork IntelligentWork { get; set; }
+        public List<IntelligentWork> IntelligentWorks { get; set; }
+
+        //public int IntelligentWorkId { get; set; }
+        //public IntelligentWork IntelligentWork { get; set; }
     }
 }

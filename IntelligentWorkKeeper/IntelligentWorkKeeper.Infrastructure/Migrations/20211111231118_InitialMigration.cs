@@ -8,34 +8,21 @@ namespace IntelligentWorkKeeper.Infrastructure.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Articles",
+                name: "Authors",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CollectionTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    StartPage = table.Column<int>(type: "int", nullable: false),
-                    EndPage = table.Column<int>(type: "int", nullable: false),
-                    MagazineNumber = table.Column<int>(type: "int", nullable: false),
-                    Part = table.Column<int>(type: "int", nullable: false),
-                    ArticleType = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PatronymicName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ShortFirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ShortPatronymicName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NumberInList = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Articles", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Books",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Edition = table.Column<int>(type: "int", nullable: false),
-                    EditionType = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    BookType = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Books", x => x.Id);
+                    table.PrimaryKey("PK_Authors", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -52,7 +39,26 @@ namespace IntelligentWorkKeeper.Infrastructure.Migrations
                     City = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     GRNTI = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Publisher = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UDK = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PageCount = table.Column<int>(type: "int", nullable: true),
+                    CollectionTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    StartPage = table.Column<int>(type: "int", nullable: true),
+                    EndPage = table.Column<int>(type: "int", nullable: true),
+                    MagazineNumber = table.Column<int>(type: "int", nullable: true),
+                    Part = table.Column<int>(type: "int", nullable: true),
+                    ArticleType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Edition = table.Column<int>(type: "int", nullable: true),
+                    EditionType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BookType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProductType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProductName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Number = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    RegistrationDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    RequestDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    RightHolder = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -60,60 +66,27 @@ namespace IntelligentWorkKeeper.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Publications",
+                name: "AuthorIntelligentWork",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Publisher = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UDK = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PageCount = table.Column<int>(type: "int", nullable: false)
+                    AuthorsId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    IntelligentWorksId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Publications", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "RegistrationCertificates",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ProductType = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ProductName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Number = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    RegistrationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    RequestDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    RightHolder = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_RegistrationCertificates", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Authors",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PatronymicName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ShortFirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ShortPatronymicName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    NumberInList = table.Column<int>(type: "int", nullable: false),
-                    IntelligentWorkId = table.Column<int>(type: "int", nullable: false),
-                    IntelligentWorkId1 = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Authors", x => x.Id);
+                    table.PrimaryKey("PK_AuthorIntelligentWork", x => new { x.AuthorsId, x.IntelligentWorksId });
                     table.ForeignKey(
-                        name: "FK_Authors_IntelligentWorks_IntelligentWorkId1",
-                        column: x => x.IntelligentWorkId1,
+                        name: "FK_AuthorIntelligentWork_Authors_AuthorsId",
+                        column: x => x.AuthorsId,
+                        principalTable: "Authors",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_AuthorIntelligentWork_IntelligentWorks_IntelligentWorksId",
+                        column: x => x.IntelligentWorksId,
                         principalTable: "IntelligentWorks",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -158,9 +131,9 @@ namespace IntelligentWorkKeeper.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Authors_IntelligentWorkId1",
-                table: "Authors",
-                column: "IntelligentWorkId1");
+                name: "IX_AuthorIntelligentWork_IntelligentWorksId",
+                table: "AuthorIntelligentWork",
+                column: "IntelligentWorksId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Indexations_IntelligentWorkId1",
@@ -176,13 +149,7 @@ namespace IntelligentWorkKeeper.Infrastructure.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Articles");
-
-            migrationBuilder.DropTable(
-                name: "Authors");
-
-            migrationBuilder.DropTable(
-                name: "Books");
+                name: "AuthorIntelligentWork");
 
             migrationBuilder.DropTable(
                 name: "Indexations");
@@ -191,10 +158,7 @@ namespace IntelligentWorkKeeper.Infrastructure.Migrations
                 name: "KeyWords");
 
             migrationBuilder.DropTable(
-                name: "Publications");
-
-            migrationBuilder.DropTable(
-                name: "RegistrationCertificates");
+                name: "Authors");
 
             migrationBuilder.DropTable(
                 name: "IntelligentWorks");
