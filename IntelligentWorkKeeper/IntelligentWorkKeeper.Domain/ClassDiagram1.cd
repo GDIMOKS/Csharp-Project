@@ -1,4 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="IntelligentWorkKeeper.Domain.Models.Article">
+    <Position X="6.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAIAAAACAAAIAAAEAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Models\Article.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IntelligentWorkKeeper.Domain.Models.Author">
+    <Position X="6.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIADAEAAAAAAAAAAAAACAAgAAAAIAAAAAAAAAAAQAAg=</HashCode>
+      <FileName>Models\Author.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="IntelligentWorks" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="IntelligentWorkKeeper.Domain.Models.Book">
+    <Position X="9" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAA=</HashCode>
+      <FileName>Models\Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IntelligentWorkKeeper.Domain.Models.Indexation">
+    <Position X="11.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAAAAAAAAAAgAAAAAAAAAAAAAAAQAAQAAAAAA=</HashCode>
+      <FileName>Models\Indexation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IntelligentWork" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="IntelligentWorkKeeper.Domain.Models.IntelligentWork">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQCCAAAEDAAgAEAIQAAAAAAAAAJAAAAAARAAAAAAAAA=</HashCode>
+      <FileName>Models\IntelligentWork.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Authors" />
+      <Property Name="KeyWords" />
+      <Property Name="Indexations" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="IntelligentWorkKeeper.Domain.Models.KeyWord">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEGAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\KeyWord.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IntelligentWork" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="IntelligentWorkKeeper.Domain.Models.Publication">
+    <Position X="7.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAACEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Publication.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IntelligentWorkKeeper.Domain.Models.RegistrationCertificate">
+    <Position X="11.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAQAAAAAAAAAEAAAAAAAQAAAAAAAAAAAAAIQAA=</HashCode>
+      <FileName>Models\RegistrationCertificate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
